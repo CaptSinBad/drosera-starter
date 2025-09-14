@@ -1,1 +1,79 @@
+ethereum_rpc = "https://ethereum-hoodi-rpc.publicnode.com"
+drosera_rpc = "https://relay.hoodi.drosera.io"
+eth_chain_id = 560048
+drosera_address = "0x91cB447BaFc6e0EA0F4Fe056F5a9b1F14bb06e5D"
+
+[traps]
+
+[traps.OwnerChangeTrap]
+path = "out/OwnerChangeTrap.sol/OwnerChangeTrap.json"
+response_contract = "0xYourResponderAddress"
+response_function = "respond(bytes)"
+cooldown_period_blocks = 2
+min_number_of_operators = 1
+max_number_of_operators = 2
+block_sample_size = 3
+private = true
+whitelist = []
+address = "0x"
+
+[traps.MintSpikeTrap]
+path = "out/MintSpikeTrap.sol/MintSpikeTrap.json"
+response_contract = "0xYourResponderAddress"
+response_function = "respond(bytes)"
+cooldown_period_blocks = 2
+min_number_of_operators = 1
+max_number_of_operators = 2
+block_sample_size = 3
+private = true
+whitelist = []
+address = "0x"
+
+[traps.VestingDrainTrap]
+path = "out/VestingDrainTrap.sol/VestingDrainTrap.json"
+response_contract = "0xYourResponderAddress"
+response_function = "respond(bytes)"
+cooldown_period_blocks = 2
+min_number_of_operators = 1
+max_number_of_operators = 2
+block_sample_size = 3
+private = true
+whitelist = []
+address = "0x"
+
+[traps.ApprovalSpikeTrap]
+path = "out/ApprovalSpikeTrap.sol/ApprovalSpikeTrap.json"
+response_contract = "0xYourResponderAddress"
+response_function = "respond(bytes)"
+cooldown_period_blocks = 2
+min_number_of_operators = 1
+max_number_of_operators = 2
+block_sample_size = 3
+private = true
+whitelist = []
+address = "0x"
+
+[traps.FreshRecipientTrap]
+path = "out/FreshRecipientTrap.sol/FreshRecipientTrap.json"
+response_contract = "0xYourResponderAddress"
+response_function = "respond(bytes)"
+cooldown_period_blocks = 2
+min_number_of_operators = 1
+max_number_of_operators = 2
+block_sample_size = 3
+private = true
+whitelist = []
+address = "0x"
+
+[traps.LPReserveTrap]
+path = "out/LPReserveTrap.sol/LPReserveTrap.json"
+response_contract = "0xYourResponderAddress"
+response_function = "respond(bytes)"
+cooldown_period_blocks = 2
+min_number_of_operators = 1
+max_number_of_operators = 2
+block_sample_size = 3
+private = true
+whitelist = []
+address = "0x"
 
