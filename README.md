@@ -4,7 +4,7 @@ _On-chain defense for the worst-case scenario: compromised keys._
 ---
 
 ## ⚠️ Disclaimer  
-This repository contains **proof-of-concept (PoC) traps** I built using the [Drosera framework](https://dev.drosera.io).  
+This repository contains **proof-of-concept (PoC) traps** i built using the [Drosera framework](https://dev.drosera.io).  
 They are **not audited** and **not production-ready**.  
 Protocols and developers can deploy them on testnets to explore their use cases and extend them for real defense.  
 
