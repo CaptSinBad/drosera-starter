@@ -3,6 +3,15 @@ _On-chain defense for the worst-case scenario: compromised keys._
 
 ---
 
+## ⚠️ Disclaimer  
+This repository contains **proof-of-concept (PoC) traps** I built using the [Drosera framework](https://dev.drosera.io).  
+They are **not audited** and **not production-ready**.  
+Protocols and developers can deploy them on testnets to explore their use cases and extend them for real defense.  
+
+---
+---
+
+
 ## 🚨 The Problem  
 
 Audits secure the code — **not the keys**.  
@@ -16,7 +25,7 @@ These risks are **not auditable**. No static analysis or fuzzing tool can antici
 
 ---
 
-## 🛡️ The Solution  
+## 🛡️ The PoC Solution  
 
 Drosera adds an **on-chain defensive layer** for the worst case.  
 
@@ -24,7 +33,8 @@ Drosera adds an **on-chain defensive layer** for the worst case.
 - **Automated responses** — triggered traps can pause, freeze, or escalate to DAO governance.  
 - **Programmable defense** — projects select traps and reactions that fit their threat model.  
 
-Instead of relying solely on key security, Drosera ensures that even if keys are compromised, your protocol still has a fighting chance.  
+Instead of relying solely on key security, Drosera ensures that even if keys are compromised, your protocol still has a fighting chance. 
+This repo showcases **PoC traps** that demonstrate the model.  
 
 ---
 
@@ -58,9 +68,9 @@ Drosera has two main components: **Traps** and the **Responder**.
 ### 🔒 Traps  
 Smart contracts that **observe and constrain** high-risk behaviors.  
 
-## 🧩 Available Traps (Custom-Built Here)
+## 🧩 Available PoC Traps (Custom-Built Here)
 
-This repo contains traps I designed and implemented using the Drosera framework.  
+This repo contains Proof of Concept traps I designed and implemented using the Drosera framework.  
 
 - **OwnerChangeTrap** → detects and flags sudden ownership transfers.  
 - **MintSpikeTrap** → monitors anomalous token minting events.  
