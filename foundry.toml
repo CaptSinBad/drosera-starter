@@ -19,5 +19,5 @@ remappings = [
 ]
 
 [rpc_endpoints]
-hoodi = "https://rpc.ankr.com/eth_hoodi/b0e129b35af27176c4417c6aee1dfa2943f1d6770c30bf3dd4c5dc6805b2009f"
+hoodi = "https://rpc.ankr.com/eth_hoodi/YOUR_KEY"
 
