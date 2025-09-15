@@ -91,4 +91,62 @@ When a trap is triggered, the **Drosera Responder** can:
 The responder is built for **atomic action**: paired with Flashbots, mitigations can land in the **same block** as the exploit attempt, cutting off escape routes.  
 
 ---
+1. GuardianNoBuyback.sol
 
+Purpose: guard against DAO guardians selling treasury back.
+
+Check: does it integrate with DroseraResponder properly and call optIntoTrap?
+
+2. DaoLpVault.sol
+
+Purpose: hold LP positions with trap monitoring.
+
+Check: ensures deposits/withdrawals only when not tripped.
+
+3. DroseraResponder.sol
+
+Core responder that listens to traps and executes responses.
+
+Must:
+
+Register traps correctly.
+
+Validate operators.
+
+Handle multiple trap outcomes (not just revert).
+
+4. OwnerChangeTrap.sol
+
+Should trigger on sudden owner/guardian change.
+
+Must check: does evaluate() compare current vs expected owner?
+
+5. MintSpikeTrap.sol
+
+Detects sudden mint inflation.
+
+Must check: does it properly track totalSupply() vs prior? (without storing state → may need encoded params).
+
+6. VestingDrainTrap.sol
+
+Catches suspicious vesting contract drain.
+
+Must: check if balances drop too sharply.
+
+7. ApprovalSpikeTrap.sol
+
+Detects large approve() spikes.
+
+Must: parse ERC20 Approval logs.
+
+8. FreshRecipientTrap.sol
+
+Detects sending large amounts to a never-before-seen wallet.
+
+Must: ensure address age check is stateless (rely on heuristics like nonce == 0).
+
+9. LPReserveTrap.sol
+
+Detects liquidity pool reserve drain.
+
+Must: compare getReserves() before/after.
